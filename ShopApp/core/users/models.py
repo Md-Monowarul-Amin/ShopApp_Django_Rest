@@ -13,13 +13,13 @@ class CustomUser(AbstractUser):
     email = models.EmailField(_("email address"), unique=True)
     username = None
     first_name = models.CharField(_("first name"), max_length=150)
-    last_name = models.CharField(_("last name"), max_length=150)
+    last_name = models.CharField(_("last name"), max_length=150, default="")
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     date_joined = models.DateTimeField(default=datetime.datetime.now)
 
     USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = ['first_name', 'last_name']
+    REQUIRED_FIELDS = ['first_name']
 
     objects = CustomUserManager()
 

@@ -9,7 +9,7 @@ class CustomUserManager(BaseUserManager):
     for authentication instead of usernames.
     """
 
-    def create_user(self, email, password, first_name, last_name, is_staff=False, is_active=True, is_superuser=False):
+    def create_user(self, email, password, first_name, last_name="", is_staff=False, is_active=True, is_superuser=False):
         if not email:
             raise ValueError(_('Users must have an email address'))
         email = self.normalize_email(email)
@@ -21,6 +21,6 @@ class CustomUserManager(BaseUserManager):
         user.save()
         return user
 
-    def create_superuser(self, email, password, first_name, last_name):
+    def create_superuser(self, email, password, first_name, last_name=""):
         
         return self.create_user(email, password, first_name, last_name, True, True, True)
