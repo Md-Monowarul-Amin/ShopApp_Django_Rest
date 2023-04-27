@@ -2,9 +2,13 @@
 from django.urls import path, include
 
 from .views import (
-    RegisterUserView
+    CustomerUserListView,
+    RegisterUserView,
+    CustomUserDetailView,
 )
 
 urlpatterns = [
-    path('', RegisterUserView.as_view()),
+    path('register/', RegisterUserView.as_view()),
+    path('detail/', CustomerUserListView.as_view()),
+    path('detail/<int:user_id>', CustomUserDetailView.as_view()),
 ]
