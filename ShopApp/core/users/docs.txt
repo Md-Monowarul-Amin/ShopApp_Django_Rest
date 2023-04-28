@@ -7,3 +7,12 @@ https://blog.logrocket.com/django-rest-framework-create-api/
 
 Checking Object Type:
 https://stackoverflow.com/questions/3438003/django-model-inheritance-and-type-check
+
+Permissions:
+https://github.com/veryacademy/YT-Django-DRF-Simple-Blog-Series-JWT-Part-3/blob/master/django/blog_api/views.py
+
+
+
+A SHOP APP FROM github:
+https://github.com/codingforentrepreneurs/Django-Rest-Framework-Tutorial/tree/2ee606fb8b6053134d686a4b0dffe1374d778c7c
+
